@@ -1,0 +1,33 @@
+{
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.interface.ts"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "removeComments": true,
+    "lib": [
+      "es2016"
+    ],
+    "rootDirs": [
+      "./src/"
+    ],
+    "typeRoots": [
+      "./typings",
+      "node_modules/@types"
+    ],
+    "outDir": "dist",
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "baseUrl": "./src",
+    "inlineSourceMap": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true
+  }
+}

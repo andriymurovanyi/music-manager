@@ -1,0 +1,27 @@
+{
+  "name": "message-manager",
+  "version": "1.0.0",
+  "description": "Music manager server application",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "dev": "tsc --watch & nodemon dist"
+  },
+  "author": "andriymurovanyi",
+  "license": "ISC",
+  "dependencies": {
+    "cassandra-driver": "^4.6.3",
+    "got": "^11.8.2",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.1",
+    "nodemon": "^2.0.7",
+    "@types/koa": "^2.13.4",
+    "@types/koa-router": "^7.4.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
