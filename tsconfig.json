@@ -20,7 +20,8 @@
     ],
     "typeRoots": [
       "./typings",
-      "node_modules/@types"
+      "node_modules/@types",
+      "node_modules/koa-body"
     ],
     "outDir": "dist",
     "strictNullChecks": true,

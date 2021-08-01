@@ -1,21 +1,16 @@
-import { ExtendableContext } from 'koa';
 import Router from 'koa-router';
+import IAuthController from '../../../interfaces/controllers/auth.controller';
+import auth from '../middleware/check-auth';
 
-function createRouter(controller: any) {
+function createRouter(controller: IAuthController) {
   const router = new Router();
   console.log('Controller: ', controller);
 
   router
-    .post('/login', async (ctx: ExtendableContext) => {
-      console.log('login route called');
-      // @ts-ignore
-      const { email, password } = ctx.request.body;
-      ctx.body = `Authenticated:  ${email} and ${password}`
-    })
-    .post('/register', async (ctx: ExtendableContext) => {
-      // @ts-ignore
-      const { email, password } = ctx.request.body;
-      ctx.body = `Registered:  ${email} and ${password}`
+    .post('/login', controller.login)
+    .post('/register', controller.register)
+    .get('/users', auth, (ctx: any) => {
+      ctx.body = 'Kek message returned';
     })
 
   return router;
