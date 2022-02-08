@@ -1,5 +1,5 @@
 import Router from 'koa-router';
-import IAuthController from '../../../interfaces/controllers/auth.controller';
+import IAuthController from 'interfaces/controllers/auth.controller';
 import auth from '../middleware/check-auth';
 
 function createRouter(controller: IAuthController) {

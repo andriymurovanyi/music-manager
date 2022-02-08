@@ -1,8 +1,7 @@
 import Router from 'koa-router';
 import createAuthRouter from './routes/auth';
-import { createAuthController } from '../../factory';
-import { RouterOptions } from '../../interfaces/app/router-options';
-
+import { createAuthController } from 'factory';
+import { RouterOptions } from 'interfaces/app/router-options';
 const versionPrefix = '/api/v1';
 
 function createAPIv1() {
@@ -12,7 +11,7 @@ function createAPIv1() {
   const authController = createAuthController();
   const authRouter: RouterOptions = createAuthRouter(authController);
 
-  appRouter.use('/auth', authRouter.routes(), authRouter.allowedMethods())
+  appRouter.use('/auth' as any, authRouter.routes(), authRouter.allowedMethods());
 
   return appRouter;
 }

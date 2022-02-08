@@ -11,7 +11,7 @@ const connectParams = {
   useFindAndModify: false
 }
 
-function connectToDB(uri: string) {
+export default function(uri: string) {
   mongoose
     .connect(uri, connectParams)
     .then(() => {
@@ -21,8 +21,4 @@ function connectToDB(uri: string) {
       console.error(`${errorMessage}\n${error}`);
       process.exit(errorExitCode);
     })
-}
-
-export {
-  connectToDB
 }
