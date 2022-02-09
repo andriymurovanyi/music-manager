@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rm -rf dist && tsc",
     "dev": "tsc && nodemon dist/index.js",
-    "start": "rm -rf dist && tsc && node dist/index.js"
+    "start": "rm -rf dist && tsc && node dist/index.js",
+    "tsc": "./node_modules/typescript/bin/tsc"
   },
   "author": "andriymurovanyi",
   "license": "ISC",
