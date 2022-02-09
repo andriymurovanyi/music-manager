@@ -19,6 +19,7 @@ function createApp() {
   const logger = createLogger();
   const requestLogger = createRequestLogger(logger);
   const mongoUri = process.env.MONGO_URI as string;
+  console.log('Mongo URI is: ', mongoUri);
 
   connectToDB(mongoUri);
 
