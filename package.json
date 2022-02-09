@@ -4,8 +4,8 @@
   "description": "Music manager server application",
   "scripts": {
     "build": "rm -rf dist && tsc",
-    "dev": "tsc --watch & nodemon dist",
-    "start": "node dist/index.js"
+    "dev": "tsc && nodemon dist/index.js",
+    "start": "rm -rf dist && tsc && node dist/index.js"
   },
   "author": "andriymurovanyi",
   "license": "ISC",
@@ -21,7 +21,7 @@
     "koa-router": "^10.0.0",
     "logform": "^2.3.2",
     "mongodb": "^4.0.1",
-    "mongoose": "^5.13.5",
+    "mongoose": "^5.8.13",
     "semver": "^7.3.5",
     "winston": "^3.5.1",
     "winston-daily-rotate-file": "^4.6.0"

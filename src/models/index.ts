@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-const successMessage = 'Successfully connected to database';
 const errorMessage = 'Database connection failed. Exiting now...';
 const errorExitCode = 1;
 
@@ -15,7 +14,7 @@ export default function(uri: string) {
   mongoose
     .connect(uri, connectParams)
     .then(() => {
-      console.log(successMessage);
+      console.log(`Successfully connected to database: ${uri}`);
     })
     .catch((error: any) => {
       console.error(`${errorMessage}\n${error}`);
